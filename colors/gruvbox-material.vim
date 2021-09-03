@@ -298,6 +298,7 @@ call gruvbox_material#highlight('Aqua', s:palette.aqua, s:palette.none)
 call gruvbox_material#highlight('Blue', s:palette.blue, s:palette.none)
 call gruvbox_material#highlight('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
+  call gruvbox_material#highlight('FgItalic', s:palette.fg0, s:palette.none, 'italic')
   call gruvbox_material#highlight('RedItalic', s:palette.red, s:palette.none, 'italic')
   call gruvbox_material#highlight('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
   call gruvbox_material#highlight('YellowItalic', s:palette.yellow, s:palette.none, 'italic')
@@ -306,6 +307,7 @@ if s:configuration.enable_italic
   call gruvbox_material#highlight('BlueItalic', s:palette.blue, s:palette.none, 'italic')
   call gruvbox_material#highlight('PurpleItalic', s:palette.purple, s:palette.none, 'italic')
 else
+  call gruvbox_material#highlight('FgItalic', s:palette.fg0, s:palette.none)
   call gruvbox_material#highlight('RedItalic', s:palette.red, s:palette.none)
   call gruvbox_material#highlight('OrangeItalic', s:palette.orange, s:palette.none)
   call gruvbox_material#highlight('YellowItalic', s:palette.yellow, s:palette.none)
@@ -315,6 +317,7 @@ else
   call gruvbox_material#highlight('PurpleItalic', s:palette.purple, s:palette.none)
 endif
 if s:configuration.enable_bold
+  call gruvbox_material#highlight('FgBold', s:palette.fg0, s:palette.none, 'bold')
   call gruvbox_material#highlight('RedBold', s:palette.red, s:palette.none, 'bold')
   call gruvbox_material#highlight('OrangeBold', s:palette.orange, s:palette.none, 'bold')
   call gruvbox_material#highlight('YellowBold', s:palette.yellow, s:palette.none, 'bold')
@@ -323,6 +326,7 @@ if s:configuration.enable_bold
   call gruvbox_material#highlight('BlueBold', s:palette.blue, s:palette.none, 'bold')
   call gruvbox_material#highlight('PurpleBold', s:palette.purple, s:palette.none, 'bold')
 else
+  call gruvbox_material#highlight('FgBold', s:palette.fg0, s:palette.none)
   call gruvbox_material#highlight('RedBold', s:palette.red, s:palette.none)
   call gruvbox_material#highlight('OrangeBold', s:palette.orange, s:palette.none)
   call gruvbox_material#highlight('YellowBold', s:palette.yellow, s:palette.none)
@@ -449,34 +453,34 @@ highlight! link TSComment Comment
 highlight! link TSConditional Red
 highlight! link TSConstBuiltin BlueItalic
 highlight! link TSConstMacro BlueItalic
-highlight! link TSConstant Fg
+highlight! link TSConstant BlueItalic
 highlight! link TSConstructor GreenBold
 highlight! link TSException Red
-highlight! link TSField Green
+highlight! link TSField Orange
 highlight! link TSFloat Purple
-highlight! link TSFuncBuiltin GreenBold
-highlight! link TSFuncMacro GreenBold
-highlight! link TSFunction GreenBold
+highlight! link TSFuncBuiltin AquaItalic
+highlight! link TSFuncMacro AquaItalic
+highlight! link TSFunction Aqua
 highlight! link TSInclude Red
 highlight! link TSKeyword Red
 highlight! link TSKeywordFunction Red
 highlight! link TSKeywordOperator Orange
 highlight! link TSLabel Orange
-highlight! link TSMethod GreenBold
+highlight! link TSMethod AquaBold
 highlight! link TSNamespace YellowItalic
 highlight! link TSNone Fg
 highlight! link TSNumber Purple
 highlight! link TSOperator Orange
-highlight! link TSParameter Fg
-highlight! link TSParameterReference Fg
-highlight! link TSProperty Green
-highlight! link TSPunctBracket Fg
+highlight! link TSParameter FgBold
+highlight! link TSParameterReference FgItalic
+highlight! link TSProperty Purple
+highlight! link TSPunctBracket Orange
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Blue
 highlight! link TSRepeat Red
-highlight! link TSString Aqua
+highlight! link TSString Green
 highlight! link TSStringEscape Green
-highlight! link TSStringRegex Green
+highlight! link TSStringRegex Blue
 highlight! link TSStructure BlueItalic
 highlight! link TSSymbol Fg
 highlight! link TSTag Orange
